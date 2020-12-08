@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EIVA</title>
+</head>
+<style>
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password], input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.submitbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #750a55;
+}
+
+h2{
+    text-align: center;
+    color: rgb(151, 43, 151);
+}
+
+.containers {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .submitbtn {
+     width: 100%;
+  }
+}
+</style>
+<body>
+    
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="125px">
+                
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    
+                </ul>
+            </nav>
+            <img src="images/shopping-cart.png " class="cart">
+            <img src="icons/menu.png" class="menu-icon" onclick="menutoggle()">
+       
+        </div>
+    </div>
+    
+    <!-------------login------------->
+    <h2>Create Your Account</h2>
+
+<form>
+
+  <div class="containers">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw"><b>Confirm</b></label>
+    <input type="password" placeholder="Confirm Password" name="psw" required>
+    
+    <label for="phn"><b>Mobile Number</b></label>
+    <input type="number" placeholder="Enter Mobile Number" name="phn" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="containers" style="background-color:#f1f1f1">
+    <button type="reset" class="submitbtn" onclick="location.href='index.html'">Login</button>
+    <button type="button" class="submitbtn" onclick="location.href='account.html'">Create account </button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+
+
+    <!--------------footer--------------->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="icons/google-play.png">
+                    <img src="icons/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo.png">
+                <p>Our purpose is to sustainably make the pleasure and benefits of products accessible to the many</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li><img src="icons/facebook.png"></li>
+                    <li><img src="icons/instagram.png"></li>
+                    <li><img src="icons/twitter.png"></li>
+                    <li>Contact Us : 9967158710</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">copyright 2020 - Neeraja Rajan</p>
+    </div>
+</div>
+
+<!---------------js for toggle menu---------------->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px"
+        }
+        else{
+            MenuItems.style.maxHeight = "0px"
+        }
+    }
+</script>
+
+
+</body>
+</html>
